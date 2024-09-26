@@ -1,0 +1,118 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+/* Estilos globais */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #282c34;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+footer {
+  background-color: #282c34;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+main {
+  padding: 20px;
+}
+
+/* Layout de grade para usuários e posts */
+.user-grid,
+.post-list,
+.comment-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.user-card,
+.post-item,
+.comment-item {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.user-card:hover,
+.post-item:hover,
+.comment-item:hover {
+  transform: scale(1.05);
+}
+
+/* Layout para dispositivos pequenos (mobile-first) */
+.user-grid,
+.post-list,
+.comment-list {
+  justify-content: center;
+}
+
+.user-card,
+.post-item,
+.comment-item {
+  flex: 1 1 100%;
+  max-width: 100%;
+}
+
+/* Layout para tablets */
+@media (min-width: 576px) {
+  .user-card,
+  .post-item,
+  .comment-item {
+    flex: 1 1 45%;
+    max-width: 45%;
+  }
+}
+
+/* Layout para desktops */
+@media (min-width: 992px) {
+  .user-card,
+  .post-item,
+  .comment-item {
+    flex: 1 1 30%;
+    max-width: 30%;
+  }
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilos para layout de lista */
+.list-view .user-grid,
+.list-view .post-list,
+.list-view .comment-list {
+  flex-direction: column;
+}
+
+.list-view .user-card,
+.list-view .post-item,
+.list-view .comment-item {
+  flex: 1 1 100%;
+  max-width: 100%;
+}
